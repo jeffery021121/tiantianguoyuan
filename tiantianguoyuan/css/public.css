@@ -1,0 +1,609 @@
+body {
+  font-family: iconfont; }
+
+html, body {
+  overflow-x: hidden; }
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset,
+legend, input, button, textarea, blockquote, th, td, p {
+  margin: 0;
+  padding: 0; }
+
+img {
+  display: block; }
+
+a {
+  text-decoration: none; }
+
+li {
+  list-style: none; }
+
+.line {
+  height: 10px;
+  width: 0;
+  border-right: solid 2px #EEEEEE; }
+
+.rota1 {
+  transform: rotate(90deg);
+  transition: all 1s; }
+
+.rota2 {
+  transform: rotate(0deg);
+  transition: all 1s; }
+
+.changebg {
+  background: url(../img/icons.png) -503px -418px; }
+
+.clear, #nav .nav #search #seach_right #shop_show:after, #footer #sfooter #sfooter_body:after {
+  content: ".";
+  display: block;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  clear: both; }
+
+#header {
+  width: 100%;
+  background: #EEEEEE; }
+
+.header {
+  width: 1260px;
+  background: #EEEEEE;
+  height: 30px;
+  margin: 0 auto;
+  font-size: 12px; }
+  .header:after {
+    content: ".";
+    clear: both;
+    height: 0;
+    overflow: hidden;
+    display: block;
+    visibility: hidden; }
+  .header ul.header_left {
+    float: left; }
+    .header ul.header_left:after {
+      content: ".";
+      clear: both;
+      height: 0;
+      overflow: hidden;
+      display: block;
+      visibility: hidden; }
+    .header ul.header_left li {
+      float: left;
+      line-height: 30px;
+      color: #ACACAC; }
+      .header ul.header_left li:after {
+        content: ".";
+        clear: both;
+        height: 0;
+        overflow: hidden;
+        display: block;
+        visibility: hidden; }
+      .header ul.header_left li.location {
+        font-size: 16px;
+        padding: 0 10px;
+        margin-right: 5px;
+        position: relative; }
+        .header ul.header_left li.location:after {
+          content: ".";
+          clear: both;
+          height: 0;
+          overflow: hidden;
+          display: block;
+          visibility: hidden; }
+        .header ul.header_left li.location .icon-car {
+          color: #64A131; }
+        .header ul.header_left li.location #city {
+          font-size: 12px; }
+        .header ul.header_left li.location .icon-icon-up {
+          line-height: 20px;
+          font-size: 20px; }
+        .header ul.header_left li.location #_location {
+          z-index: 11;
+          height: 350px;
+          line-height: 30px;
+          font-size: 14px;
+          display: none;
+          position: absolute;
+          left: 0;
+          top: 30px;
+          background: white;
+          width: 295px;
+          box-shadow: 0 10px 15px rgba(175, 175, 175, 0.75);
+          padding: 0 10px;
+          overflow-y: scroll; }
+          .header ul.header_left li.location #_location:after {
+            content: ".";
+            clear: both;
+            height: 0;
+            overflow: hidden;
+            display: block;
+            visibility: hidden; }
+          .header ul.header_left li.location #_location h5 {
+            font-weight: 100;
+            color: #999999;
+            margin: 0 5px;
+            float: left;
+            font-size: 14px; }
+          .header ul.header_left li.location #_location .hot_city {
+            position: relative;
+            float: left;
+            background: #EEEEEE;
+            width: 100%; }
+            .header ul.header_left li.location #_location .hot_city li {
+              float: left; }
+              .header ul.header_left li.location #_location .hot_city li a {
+                font-size: 14px;
+                color: #555; }
+              .header ul.header_left li.location #_location .hot_city li:hover a {
+                text-decoration: underline;
+                color: #64A131; }
+          .header ul.header_left li.location #_location #sel_city {
+            color: #999999;
+            margin: 0 5px;
+            float: left;
+            font-size: 14px; }
+          .header ul.header_left li.location #_location .all_city {
+            width: 100%; }
+            .header ul.header_left li.location #_location .all_city:after {
+              content: ".";
+              clear: both;
+              height: 0;
+              overflow: hidden;
+              display: block;
+              visibility: hidden; }
+            .header ul.header_left li.location #_location .all_city li {
+              cursor: pointer;
+              width: 100%;
+              color: #555555;
+              border-bottom: 1px dashed #f1f1f1; }
+              .header ul.header_left li.location #_location .all_city li span {
+                float: right; }
+              .header ul.header_left li.location #_location .all_city li ul {
+                margin-left: 5px;
+                display: none; }
+              .header ul.header_left li.location #_location .all_city li div {
+                cursor: pointer;
+                width: 100%; }
+            .header ul.header_left li.location #_location .all_city li:hover {
+              color: #64A131; }
+        .header ul.header_left li.location:hover {
+          background: white; }
+          .header ul.header_left li.location:hover #_location {
+            display: block; }
+      .header ul.header_left li a {
+        color: #64A131;
+        padding-left: 10px; }
+      .header ul.header_left li a:hover {
+        text-decoration: underline; }
+  .header ul.header_right {
+    float: right; }
+    .header ul.header_right > li {
+      float: left;
+      padding: 0 8px;
+      height: 30px;
+      line-height: 30px;
+      color: #ACACAC;
+      position: relative; }
+      .header ul.header_right > li a {
+        color: #ACACAC; }
+      .header ul.header_right > li a:hover {
+        color: #F5B012; }
+      .header ul.header_right > li span.icon-yunxiaomaservice, .header ul.header_right > li span.icon-phone {
+        line-height: 20px;
+        font-size: 18px;
+        color: #64A131; }
+      .header ul.header_right > li#notic:hover {
+        background: white; }
+        .header ul.header_right > li#notic:hover #notice_list {
+          height: auto;
+          top: 30px;
+          padding: 13px; }
+      .header ul.header_right > li #notice_list {
+        z-index: 11;
+        height: 0;
+        position: absolute;
+        right: 0;
+        background: white;
+        width: 210px;
+        overflow: hidden; }
+        .header ul.header_right > li #notice_list li {
+          color: #555555;
+          width: 100%;
+          clear: both;
+          border-bottom: 1px dashed #ddd;
+          cursor: pointer; }
+          .header ul.header_right > li #notice_list li:hover {
+            color: #64A131; }
+          .header ul.header_right > li #notice_list li.last_notice {
+            text-align: center;
+            border-bottom: none;
+            position: relative; }
+            .header ul.header_right > li #notice_list li.last_notice p {
+              position: absolute;
+              top: 30px;
+              line-height: 14px;
+              padding: 1px 5px 0px 5px;
+              background: red;
+              color: white;
+              border-radius: 15%; }
+            .header ul.header_right > li #notice_list li.last_notice a {
+              display: block;
+              color: #64A131;
+              position: relative;
+              top: 7px; }
+            .header ul.header_right > li #notice_list li.last_notice a:hover {
+              text-decoration: underline; }
+      .header ul.header_right > li#phonehome {
+        position: relative; }
+        .header ul.header_right > li#phonehome #_phonehome {
+          z-index: 11;
+          display: none;
+          position: absolute;
+          top: 30px;
+          right: 0;
+          height: auto;
+          box-shadow: 0 10px 15px rgba(175, 175, 175, 0.75);
+          padding: 10px 15px;
+          color: #555;
+          font-size: 12px;
+          background: white;
+          width: auto; }
+          .header ul.header_right > li#phonehome #_phonehome span {
+            color: #64A131; }
+          .header ul.header_right > li#phonehome #_phonehome img {
+            float: left; }
+          .header ul.header_right > li#phonehome #_phonehome p {
+            text-align: center; }
+          .header ul.header_right > li#phonehome #_phonehome #dlapp {
+            width: 260px;
+            overflow: hidden;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #DDDDDD; }
+            .header ul.header_right > li#phonehome #_phonehome #dlapp #android, .header ul.header_right > li#phonehome #_phonehome #dlapp #iphone {
+              cursor: pointer;
+              float: right; }
+            .header ul.header_right > li#phonehome #_phonehome #dlapp #iphone {
+              margin: 10px 0; }
+          .header ul.header_right > li#phonehome #_phonehome #wechat {
+            overflow: hidden;
+            padding-top: 15px; }
+            .header ul.header_right > li#phonehome #_phonehome #wechat p {
+              padding-left: 12px;
+              height: 100%;
+              float: left; }
+              .header ul.header_right > li#phonehome #_phonehome #wechat p span {
+                text-align: left;
+                display: block; }
+      .header ul.header_right > li#phonehome:hover {
+        background: white; }
+        .header ul.header_right > li#phonehome:hover #_phonehome {
+          display: block; }
+
+#nav {
+  width: 100%;
+  background: white;
+  padding: 20px 0; }
+  #nav .nav {
+    margin: 0 auto;
+    width: 1260px; }
+    #nav .nav:after {
+      content: ".";
+      display: block;
+      height: 0;
+      overflow: hidden;
+      visibility: hidden;
+      clear: both; }
+    #nav .nav > a {
+      display: block;
+      float: left; }
+    #nav .nav #intro {
+      padding-left: 35px;
+      float: left; }
+      #nav .nav #intro > li a {
+        display: block;
+        float: left; }
+      #nav .nav #intro li {
+        float: left;
+        position: relative; }
+        #nav .nav #intro li > span {
+          display: none;
+          position: absolute;
+          left: 5%;
+          bottom: -18px;
+          width: 90%;
+          border-bottom: 2px solid #64a131; }
+      #nav .nav #intro .active_intro > a {
+        color: #64A131; }
+      #nav .nav #intro .active_intro > span {
+        display: inline; }
+      #nav .nav #intro li > a {
+        text-align: center;
+        padding: 0 25px;
+        margin: 20px 0;
+        color: #999;
+        border-right: 1px solid #eee;
+        font-size: 14px; }
+        #nav .nav #intro li > a.intro_las_a {
+          border-right: none; }
+        #nav .nav #intro li > a:hover {
+          background: #EEEEEE; }
+    #nav .nav #search {
+      float: right; }
+      #nav .nav #search #seach_left {
+        margin-top: 20px;
+        float: left;
+        overflow: hidden; }
+        #nav .nav #search #seach_left #sea {
+          border-bottom: 1px solid black;
+          width: 180px; }
+          #nav .nav #search #seach_left #sea input::placeholder {
+            color: darkgray; }
+          #nav .nav #search #seach_left #sea #txt {
+            border: none;
+            outline: none;
+            width: 80%;
+            padding: 5px 3px;
+            vertical-align: middle; }
+          #nav .nav #search #seach_left #sea div {
+            float: right;
+            padding: 2px 3px; }
+          #nav .nav #search #seach_left #sea #sea_btn {
+            border: none;
+            outline: none;
+            cursor: pointer;
+            background: url(../img/search.jpg) no-repeat center;
+            height: 20px;
+            width: 20px; }
+        #nav .nav #search #seach_left .hot_sea {
+          float: left;
+          font-size: 14px;
+          color: #999;
+          padding: 0 3px;
+          width: 100%;
+          line-height: 22px;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis; }
+          #nav .nav #search #seach_left .hot_sea a {
+            font-size: 14px;
+            color: #999;
+            padding-right: 5px; }
+            #nav .nav #search #seach_left .hot_sea a:hover {
+              text-decoration: underline; }
+      #nav .nav #search .seach_right {
+        background: url(../img/icons.png) -503px -369px; }
+      #nav .nav #search #seach_right {
+        position: relative;
+        float: left;
+        width: 42px;
+        height: 42px;
+        margin: 20px 0 0 15px; }
+        #nav .nav #search #seach_right .icon-gouwuche {
+          font-size: 38px;
+          color: white; }
+        #nav .nav #search #seach_right #shop_num {
+          font-size: 14px;
+          position: absolute;
+          color: white;
+          left: 16px;
+          top: -2px; }
+        #nav .nav #search #seach_right #shopcar_con {
+          display: none;
+          position: absolute;
+          top: 78px;
+          right: -18px;
+          width: 310px;
+          padding: 15px 0 15px 15px;
+          background: #FFFFFF;
+          box-shadow: 0 0 45px rgba(175, 175, 175, 0.75);
+          z-index: 11;
+          text-align: center;
+          color: #999;
+          font-size: 14px;
+          max-height: 400px;
+          overflow-y: scroll; }
+        #nav .nav #search #seach_right #shopcar {
+          padding-right: 15px; }
+          #nav .nav #search #seach_right #shopcar .pro_list {
+            position: relative;
+            height: 86px;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px dashed #eee; }
+            #nav .nav #search #seach_right #shopcar .pro_list a {
+              display: block;
+              position: relative;
+              width: 100%;
+              height: 100%;
+              color: #999; }
+              #nav .nav #search #seach_right #shopcar .pro_list a img {
+                float: left;
+                box-shadow: 0 0 3px rgba(0, 0, 0, 0.3); }
+              #nav .nav #search #seach_right #shopcar .pro_list a .shopcar_intro {
+                width: 193px;
+                height: 100%;
+                float: right; }
+                #nav .nav #search #seach_right #shopcar .pro_list a .shopcar_intro > h5 {
+                  text-align: left;
+                  font-weight: 100;
+                  margin: 0 0 6px;
+                  max-width: 180px;
+                  overflow: hidden;
+                  white-space: nowrap;
+                  text-overflow: ellipsis; }
+            #nav .nav #search #seach_right #shopcar .pro_list .pro_num {
+              position: absolute;
+              bottom: 15px;
+              left: 85px;
+              width: 80px;
+              height: 22px;
+              text-align: center;
+              cursor: pointer;
+              color: #6E6E6E; }
+              #nav .nav #search #seach_right #shopcar .pro_list .pro_num .add_num, #nav .nav #search #seach_right #shopcar .pro_list .pro_num .sub_num {
+                background: #f1f1f1;
+                float: left;
+                width: 22px;
+                height: 22px;
+                border: 1px solid #ddd;
+                line-height: 20px;
+                cursor: pointer;
+                font-style: normal;
+                text-align: center;
+                font-size: 16px; }
+              #nav .nav #search #seach_right #shopcar .pro_list .pro_num .show_num {
+                float: left;
+                width: 22px;
+                height: 22px;
+                padding: 0;
+                margin: 0;
+                border-radius: 0;
+                border: 1px solid #ddd;
+                background: #fff;
+                border-left: none;
+                border-right: none;
+                line-height: 22px;
+                font-size: 16px;
+                text-align: center; }
+            #nav .nav #search #seach_right #shopcar .pro_list .del {
+              position: absolute;
+              bottom: 8px;
+              right: 0;
+              padding: 10px 6px;
+              color: #6E6E6E;
+              cursor: pointer; }
+        #nav .nav #search #seach_right #shop_show {
+          padding-top: 5px; }
+          #nav .nav #search #seach_right #shop_show #sum_num {
+            float: left; }
+            #nav .nav #search #seach_right #shop_show #sum_num #sum_numshow {
+              color: #64A131; }
+          #nav .nav #search #seach_right #shop_show #sum_price {
+            float: right; }
+            #nav .nav #search #seach_right #shop_show #sum_price #pay_money {
+              color: #64A131; }
+          #nav .nav #search #seach_right #shop_show #line {
+            height: 33px; }
+          #nav .nav #search #seach_right #shop_show #pay_now {
+            background: #64A131;
+            width: 100%;
+            color: white;
+            padding: 10px 16px;
+            font-size: 18px;
+            line-height: 20px;
+            border-radius: 6px;
+            display: block;
+            cursor: pointer; }
+
+#footer {
+  width: 100%;
+  background: white; }
+  #footer #sfooter {
+    margin: 0 auto;
+    width: 1260px;
+    background: white; }
+    #footer #sfooter #trans {
+      padding: 20px 0;
+      border-top: 1px solid #ddd;
+      border-bottom: 1px solid #ddd;
+      display: flex; }
+      #footer #sfooter #trans li {
+        flex: 0.25;
+        text-align: center;
+        height: 60px;
+        border-right: 1px solid #ddd; }
+        #footer #sfooter #trans li.trans_1 {
+          background: url(../img/icon.png) no-repeat 35px 0px; }
+        #footer #sfooter #trans li.trans_2 {
+          background: url(../img/icon.png) no-repeat 35px -55px; }
+        #footer #sfooter #trans li.trans_3 {
+          background: url(../img/icon.png) no-repeat 35px -120px; }
+        #footer #sfooter #trans li.trans_4 {
+          border-right: none;
+          background: url(../img/icon.png) no-repeat 35px -175px; }
+    #footer #sfooter #sfooter_body {
+      background: white;
+      padding: 20px 0;
+      margin-bottom: 15px;
+      border-bottom: 1px solid #ddd;
+      min-height: 160px; }
+      #footer #sfooter #sfooter_body > div {
+        float: left; }
+      #footer #sfooter #sfooter_body .fbody_1 {
+        margin: 0 80px; }
+        #footer #sfooter #sfooter_body .fbody_1 #logo_box {
+          height: 82px; }
+          #footer #sfooter #sfooter_body .fbody_1 #logo_box > img {
+            margin: 0 auto; }
+        #footer #sfooter #sfooter_body .fbody_1 > img {
+          margin: 5px auto; }
+        #footer #sfooter #sfooter_body .fbody_1 p {
+          text-align: center;
+          font-size: 18px; }
+          #footer #sfooter #sfooter_body .fbody_1 p span {
+            color: #999; }
+      #footer #sfooter #sfooter_body .fbody_2 > div {
+        float: left;
+        width: 130px;
+        text-align: center;
+        margin-right: 45px;
+        color: #999; }
+        #footer #sfooter #sfooter_body .fbody_2 > div > img {
+          margin: 0 auto; }
+        #footer #sfooter #sfooter_body .fbody_2 > div > span {
+          margin-top: 10px; }
+      #footer #sfooter #sfooter_body .fbody_3 li {
+        float: left;
+        margin-left: 30px; }
+        #footer #sfooter #sfooter_body .fbody_3 li h4 {
+          font-weight: 100;
+          margin-bottom: 20px;
+          font-size: 16px; }
+        #footer #sfooter #sfooter_body .fbody_3 li a {
+          display: block;
+          color: #999;
+          line-height: 30px;
+          font-size: 14px; }
+          #footer #sfooter #sfooter_body .fbody_3 li a:hover {
+            text-decoration: underline;
+            color: #64A131; }
+    #footer #sfooter #sfooter_footer p.sf_fp1 {
+      margin-bottom: 5px;
+      color: #999;
+      font-size: 14px;
+      text-align: center; }
+      #footer #sfooter #sfooter_footer p.sf_fp1 a {
+        font-size: 14px;
+        color: #999; }
+        #footer #sfooter #sfooter_footer p.sf_fp1 a:hover {
+          text-decoration: underline; }
+    #footer #sfooter #sfooter_footer .sf_fp2 {
+      margin-bottom: 5px;
+      font-size: 14px;
+      color: #64A131;
+      text-align: center; }
+    #footer #sfooter #sfooter_footer .sf_fp3 {
+      text-align: center; }
+      #footer #sfooter #sfooter_footer .sf_fp3 a {
+        height: 42px;
+        margin: 0 10px; }
+        #footer #sfooter #sfooter_footer .sf_fp3 a img {
+          display: inline-block; }
+
+.top_ce {
+  z-index: 10000;
+  position: fixed;
+  width: 35px;
+  height: 109px;
+  right: 0;
+  bottom: 0;
+  background: url(../img/kf.png);
+  overflow: hidden; }
+  .top_ce a {
+    display: block;
+    height: 35px;
+    width: 35px;
+    margin-bottom: 1px; }
+
+/*# sourceMappingURL=public.css.map */

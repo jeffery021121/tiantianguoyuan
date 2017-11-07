@@ -1,4 +1,44 @@
 window.onload=function(){
+	//判断有没有登录，并且进行下一步的显示
+	var _json=getCookie("login")
+	if(_json.length!=0){
+		$("#lo_reg").find("a").eq(0).text("您好，"+_json["login"]).attr("href","javascript:;")
+		$("#lo_reg").find("a").eq(1).text("退出").attr("href","javascript:;")
+	}
+	$("#lo_reg").find("a").eq(1).click(function(){
+			if(_json.length!=0){
+				setCookie("login",JSON.stringify([]))
+				_json=getCookie("login")
+				$("#lo_reg").find("a").eq(0).html(["&ensp;登录&ensp;"])
+				$("#lo_reg").find("a").eq(1).html(["&nbsp;注册有惊喜&nbsp;"])
+			}else{
+				$("#lo_reg").find("a").eq(1).attr("href","register.html")
+			}
+	})
+	$("#lo_reg").find("a").eq(0).click(function(){
+			if(_json.length!=0){
+				$(this).attr("href","javascript:;")
+			}else{
+				$(this).attr("href","login.html")
+			}
+	})
+	//购物车中的结算点击
+		$("#shop_show").on("click","#pay_now",function(){
+			if(_json.length==0){
+				location.href="login.html"
+			}else{
+				location.href="shopCar.html"
+			}
+		})
+	//点击结算跳转页面，这个页面应该是购物车的页面的，我先跳转到登录页，以后改
+	$("#check_out").click(function(){
+		if(_json.length==0){
+				location.href="login.html"
+			}else{
+				location.href="shopCar.html"
+			}
+	})
+	//header部分的城市划过和点击的效果
 	$(".all_city li:has(ul)").click(function(e){
 		var e=e||event
 		e.stopPropagation()
@@ -48,6 +88,11 @@ window.onload=function(){
 			$("#shopcar_con").slideUp(500)
 		}
 	})
+	//nav处的点击切换效果
+	$("#intro").find("li").click(function(){
+		$(this).addClass("active_intro").siblings().removeClass("active_intro")
+	})
+	//banner部分
 	var timer=setInterval(fun,2000)
 	index=0
 	function fun(){
@@ -81,18 +126,23 @@ window.onload=function(){
 		index=$(this).index()
 		$("#sbanner ul").stop().animate({"left":-1263*index},1000)
 	})
+	//右侧边栏
+	$("#top3").click(function(){
+			$("html,body").animate({"scrollTop":0},500)	
+		})
 	var deffered=$.ajax({
 		type:"get",
 		url:"../json/product.json",
 		async:true
 	});
-	
-	var str="";
+	//ajax请求，后边所有的代码都在这里	
 	deffered.done(function(res){
+		//楼梯主要板块拼接
+		var str="";
 		for(var i=0;i<res.length;++i){
 				for(var j=0;j<res[i]["product"].length;++j){
 					//拼接的都放在starsmain里面，即从其后开始拼接，写好类名
-					str+=
+					str=str+
 					`<div class="s_stairs_Box">
 						<a href="#" class="img_a">
 						<img src="../img/${res[i]['product'][j]['src']}" alt="" width="242"/>
@@ -107,8 +157,9 @@ window.onload=function(){
 					
 				}
 				$("."+res[i]["name"]).html(str);
-				str=""
+				str=new String();
 		}
+		//折扣显示
 		for(let i_dis=0;i_dis<$(".discount").length;++i_dis){
 			$(".discount").eq(i_dis).css("display","none")
 			if($(".discount").eq(i_dis).text()!=0){
@@ -121,7 +172,7 @@ window.onload=function(){
 		}
 		
 		
-		
+		//左侧楼梯点击效果
 		$("#louti").find("li").click(function(){
 			var index=$(this).index()
 			//console.log(index)
@@ -135,11 +186,7 @@ window.onload=function(){
 			$("#mask").fadeOut(1000)
 			$(".buythis").stop().animate({"background-position-x":"-517px","background-position-y":"-243px"})
 		})
-//点击结算跳转页面，这个页面应该是购物车的页面的，我先跳转到登录页，以后改
-		$("#check_out").click(function(){
-			$("#mask").fadeOut(1000)
-			location.href="login.html"
-		})
+		
 		//点击继续购物，和叉号操作一样
 		$("#continue").click(function(){
 			$("#mask").fadeOut(1000)
@@ -147,11 +194,10 @@ window.onload=function(){
 		})
 		//购物车按钮点击，遮罩层出现，存cookie，变化遮罩层里面的
 		//数据，购物车读取cookie，并且做出显示
-		
-		
 		$(".buythis").click(function(){
 			$(this).stop().animate({"background-position-x":"-514px","background-position-y":"-291px"})
 			$("#mask").fadeIn(1000)
+			//存cookie，并且判断购物车中同一种商品的数量，进行显示
 			$par=$(this).parent()
 			var arr=[]
 			var value={
@@ -162,6 +208,7 @@ window.onload=function(){
 			}
 			var flag=true
 			oldCookie=getCookie("goods")
+			//判断是否有cookie
 			if(oldCookie!=0){
 				arr=oldCookie
 				for(let i=0 ; i<arr.length; ++i){
@@ -172,10 +219,13 @@ window.onload=function(){
 					}
 				}
 			}
+			//flag为真代表无重复
 			if(flag){
 				arr.push(value)
 			}
+			//设置cookie
 			setCookie("goods",JSON.stringify(arr))
+			//购物车中有数据的话，那行字儿消失
 			$("#shopcar_con #null_show").css("display","none")
 			var sum=0
 			var payall=0
@@ -270,7 +320,6 @@ window.onload=function(){
 				$(this).remove()
 				$("#shop_num").html($("#shopcar li").length)
 			})
-			
 			//这里是总数的变化
 			var sum=0
 			var str=""
@@ -289,10 +338,6 @@ window.onload=function(){
 				$("#shop_show").html("")
 				$("#null_show").css("display","block")
 			}
-		})
-		//购物车中的结算点击
-		$("#shop_show").on("click","#pay_now",function(){
-			location.href="login.html"
 		})
 		//进来如果有购物车信习的话，先显示购物车信息
 		var arr=getCookie("goods")
@@ -346,15 +391,12 @@ window.onload=function(){
 			$("#shop_show").html(str_2)
 			
 		}
-		
-		
-		
-		
-		
-		
-		
-		//有关滚动的特效，吸顶，楼梯侧边栏等
-		document.onscroll=function(){
+	})//ajax请求完成后的数据在其中
+	
+	
+	//有关滚动的特效，吸顶，楼梯侧边栏等
+	//这里不能设置body或者HTML height：100%
+		window.onscroll=function(){
 			if($(document).scrollTop()>=$(".s_stairs").eq(0).offset().top){
 				//alert()
 				for(let i=0;i<$(".s_stairs").length;++i){
@@ -378,30 +420,10 @@ window.onload=function(){
 				$("#nav").css("position","static")
 			}
 		}
-		
-		
-		
-		
-		
-		
-		
-		
-	})//ajax请求完成后的数据在其中
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+		//有关滚动的效果又不见了，不能给HTML和body加高度100%
 }//onload
 
-
+//缓存问题，最为致命啊
 
 
 

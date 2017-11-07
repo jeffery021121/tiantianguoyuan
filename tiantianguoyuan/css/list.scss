@@ -1,0 +1,363 @@
+.clear{
+    content:".";
+    display: block;
+    height:0;
+    overflow: hidden;
+    visibility: hidden;
+    clear: both;
+}
+$color_green:#64A131;
+$h_header:30px;
+#nav{
+    box-shadow: 0 2px 8px rgba(230,230,230,0.75);
+    border-bottom: 1px solid #f1f1f1;
+    margin-bottom: 2px;
+}
+//全图遮罩层
+#mask{
+    height: 100%;
+    width: 100%;
+    background:rgba(0,0,0,0.5) ;
+    display: none;
+    position: fixed;
+    left: 0;
+    top:0;
+    z-index: 350;
+    #smask{
+        position: fixed;
+        left:0;
+        right: 0;
+        top:0;
+        bottom: 0;
+        margin: auto;
+        width: 520px;
+        height: 285px;
+        background: rgba(0,0,0,0.2);
+        #shopshow{
+            position: fixed;
+            left:0;
+            right: 0;
+            top:0;
+            bottom: 0;
+            margin: auto;
+            width: 510px;
+            height: 275px;
+            background: skyblue;
+            overflow: hidden;
+            #shops_head{
+                height: 40px;
+                padding-right: 17px;
+                background-color: #eaeaea;
+                #close{
+                    height:24px ;
+                    width:25px ;
+                    float: right;
+                    background:url(../img/cha.png) no-repeat center;
+                    margin-top: 10px;
+                    cursor: pointer;
+                }
+            }
+            #shops_body{
+                background: #FFFFFF;
+                padding: 28px 90px 25px;;
+                #addsuc{
+                    margin-bottom:22px;
+                    &:after{
+                        @extend .clear
+                    }
+                    #add_img{
+                        background: url(../img/icons.png) no-repeat -8px -247px;
+                        height: 68px;
+                        width: 60px;
+                        float: left;
+                    }
+                    &>p{
+                        font-size: 30px;
+                        margin: 13px 0;
+                        color: #555;
+                        padding-left: 20px;
+                        float: right;
+                    }
+                }
+                #shop_sum{
+                    font-size: 18px;
+                    color: #999;
+                    white-space: nowrap;
+                    padding-left: 4px;
+                    text-align: center;
+                    
+                    
+                    
+                    .shop_car_color{
+                            color: #f6ab00;
+                        }
+                }
+                #addsuc_footer{
+                    &:after{
+                        @extend .clear
+                    }
+                    padding-top:28px;
+                    #continue{
+                        color: #64a131;
+                        background: #f5ffed;
+                        border: 1px solid #64a131;
+                        cursor: pointer;
+                        float: left;
+                        margin-left: 5px;
+                        width: 147px;
+                        height: 40px;
+                        font-size: 16px;
+                        text-align: center;
+                        line-height: 40px;
+                        border-radius: 4px;
+                    }
+                    #check_out{
+                        color: rgb(239, 244, 236);
+                        background: rgb(100, 161, 49);
+                        border: 1px solid #64a131;
+                        border-color: rgb(100, 161, 49);
+                        cursor: pointer;
+                        float: right;
+                        margin-right: 5px;
+                        width: 147px;
+                        height: 40px;
+                        font-size: 16px;
+                        text-align: center;
+                        line-height: 40px;
+                        border-radius: 4px;
+                    }
+                }
+            }
+        }
+    }
+}
+//类型选择，其实没有写js
+.select{
+    width: 100%;
+    .s_select{
+        padding-top: 26px;
+        width: 1260px;
+        margin: 0 auto;
+        .sele{
+            width: 100%;
+            padding-bottom: 6px;
+            padding-top: 12px;
+            border-bottom: 1px solid #ccc;
+            &.last_sele{
+                 border-bottom: none;
+            }
+            &:after{
+                @extend .clear;
+            }
+            ._fen{
+                color: #999999;
+                line-height: 24px;
+                margin-right: 20px;
+                float: left;
+                font-weight: 100;
+            }
+            .fen_list{
+                &:after{
+                    @extend .clear;
+                }
+                float: left;
+//height:50px;
+                width:1180px;
+                //background: red;
+                .all_left{
+                        width: 48px;
+                        float: left;
+                        margin-right:2px;
+                        color: #555555;
+                        font-size: 14px;
+                        height: 24px;
+                        line-height: 24px;
+                        text-align: center;
+                        cursor: pointer;
+                        background: orange;
+                        color: white;
+//background: blue;
+                }
+                .all_right{
+                    float: left;
+                    width:1110px;
+                    //background: pink;
+                    
+                    &:after{
+                        @extend .clear
+                    }
+                    .eve_sel{
+                        display: inline-block;
+                        color: #555555;
+                        font-size: 14px;
+                        height: 24px;
+                        padding-left: 9px;
+                        padding-right: 9px;
+                        line-height: 24px;
+                        text-align: center;
+                        cursor: pointer;
+                        float: left;
+                        &:hover{
+                          background: $color_green;
+                          color:white;  
+                            }
+                        }
+                        
+                    &#pai{
+                        background: #F0F0F0;
+                    }
+                }
+            }
+        }
+    }
+}
+//产品列表，写的还算完善，包括左右两个部分，左侧是产品展示，右侧是最近浏览
+#product_list{
+    width: 100%;
+    #sproduct_list{
+        width: 1280px;
+        margin: 27px auto 0;
+        &:after{
+            @extend .clear
+        }
+        #sp_list_left{
+            width: 1000px;
+            margin-bottom: 92px;
+            float: left;
+            ul{
+                margin: 0 -4px;
+                &:after{
+                    @extend .clear
+                }
+                li{
+                    position: relative;
+                    float: left;
+                    width: 244px;
+                    margin-left: 4px;
+                    margin-right: 4px;
+                    margin-bottom: 8px;
+                    transition: all 1s;
+                    &:hover{
+                        box-shadow: 0 0 20px rgb(165,165,165);
+                    }
+                    .img_box{
+                        cursor: pointer;
+                        height: 244px;
+                        margin-bottom: 6px;
+                        position: relative;
+                        .discount{
+                            position: absolute;
+                            left: 0;
+                            top:0;
+                            font-size: 14px;
+                            line-height: 1;
+                            padding: 6px 5px;
+                            color: #fff;
+                            margin-right: 1px;
+                            display: inline-block;
+                            background: red;
+                        }
+                    }
+                    .intro_pri{
+                        height: 24px;
+                        line-height: 24px;
+                        margin-left: 3px;
+                        overflow: hidden;
+                        margin-bottom: 5px;
+                        &:after{
+                            @extend .clear
+                        }
+                        .price{
+                                padding-right: 3px;
+                                color: #999;
+                                float: right;
+                        }
+                    }
+                    .kilo_buy{
+                            padding-top: 3px;
+                            position: relative;
+                            height: 34px;
+                            &:after{
+                                @extend .clear
+                            }
+                            .kilo{
+                                display: block;
+                                padding-left: 3px;
+                                width: 200px;
+                                height: 22px;
+                                ._kilo{
+                                    height: 22px;
+                                    border: 1px solid #dddddd;
+                                    border-radius: 2px;
+                                    text-align: center;
+                                    padding-left: 5px;
+                                    padding-right: 5px;
+                                    font-size: 13px;
+                                    line-height: 22px;
+                                    color: #999999;
+                                    margin-right: 18px;
+                                    cursor: pointer;
+                                    float: left;
+                                }
+                            }
+                            .buythis{
+                                position: absolute;
+                                top: -1px;
+                                right: 5px;
+                                width: 34px;
+                                height: 34px;
+                                background: url(../img/icons.png) no-repeat -518px -243px;
+                                cursor: pointer;
+                            }
+                    }
+                }
+            }
+            
+        } 
+        #sp_list_right{
+                width: 260px;
+                padding-left: 20px;
+                float: right;
+                overflow: hidden;
+                #recentely{
+                    color: #64a131;
+                    line-height: 39px;
+                    height: 39px;
+                    border-bottom: 1px solid #ccc;
+                    font-size: 14px;
+                    font-weight: 100;
+                }
+                li{
+                    width: 260px;
+                    
+                    padding: 13px 0 8px 0;
+                    border-bottom: 1px solid #ccc; 
+                    &:after{
+                        @extend .clear
+                    }
+                    img{
+                        float: left;
+                    }
+                    .intro_money{
+                        padding-left: 10px;
+                        float: left;
+                        .intro_s{
+                            border: none;
+                            font-weight: 100;
+                            line-height: 20px;
+                            color: #555555;
+                            width: 150px;
+                            overflow: hidden;
+                            white-space: nowrap;
+                            text-overflow: ellipsis;
+                        }
+                        .money{
+                            font-size: 14px;
+                            line-height: 20px;
+                            color: #999999;
+                        }
+                    }
+                }
+        }
+    }
+}

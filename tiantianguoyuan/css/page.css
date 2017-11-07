@@ -1,0 +1,109 @@
+.clear, #mask #smask #shopshow #shops_body #addsuc:after, #mask #smask #shopshow #shops_body #addsuc_footer:after {
+  content: ".";
+  display: block;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  clear: both; }
+
+#nav {
+  box-shadow: 0 2px 8px rgba(230, 230, 230, 0.75);
+  border-bottom: 1px solid #f1f1f1;
+  margin-bottom: 2px; }
+
+#mask {
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 350; }
+  #mask #smask {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 520px;
+    height: 285px;
+    background: rgba(0, 0, 0, 0.2); }
+    #mask #smask #shopshow {
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      width: 510px;
+      height: 275px;
+      background: skyblue;
+      overflow: hidden; }
+      #mask #smask #shopshow #shops_head {
+        height: 40px;
+        padding-right: 17px;
+        background-color: #eaeaea; }
+        #mask #smask #shopshow #shops_head #close {
+          height: 24px;
+          width: 25px;
+          float: right;
+          background: url(../img/cha.png) no-repeat center;
+          margin-top: 10px;
+          cursor: pointer; }
+      #mask #smask #shopshow #shops_body {
+        background: #FFFFFF;
+        padding: 28px 90px 25px; }
+        #mask #smask #shopshow #shops_body #addsuc {
+          margin-bottom: 22px; }
+          #mask #smask #shopshow #shops_body #addsuc #add_img {
+            background: url(../img/icons.png) no-repeat -8px -247px;
+            height: 68px;
+            width: 60px;
+            float: left; }
+          #mask #smask #shopshow #shops_body #addsuc > p {
+            font-size: 30px;
+            margin: 13px 0;
+            color: #555;
+            padding-left: 20px;
+            float: right; }
+        #mask #smask #shopshow #shops_body #shop_sum {
+          font-size: 18px;
+          color: #999;
+          white-space: nowrap;
+          padding-left: 4px;
+          text-align: center; }
+          #mask #smask #shopshow #shops_body #shop_sum .shop_car_color {
+            color: #f6ab00; }
+        #mask #smask #shopshow #shops_body #addsuc_footer {
+          padding-top: 28px; }
+          #mask #smask #shopshow #shops_body #addsuc_footer #continue {
+            color: #64a131;
+            background: #f5ffed;
+            border: 1px solid #64a131;
+            cursor: pointer;
+            float: left;
+            margin-left: 5px;
+            width: 147px;
+            height: 40px;
+            font-size: 16px;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 4px; }
+          #mask #smask #shopshow #shops_body #addsuc_footer #check_out {
+            color: #eff4ec;
+            background: #64a131;
+            border: 1px solid #64a131;
+            border-color: #64a131;
+            cursor: pointer;
+            float: right;
+            margin-right: 5px;
+            width: 147px;
+            height: 40px;
+            font-size: 16px;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 4px; }
+
+/*# sourceMappingURL=page.css.map */

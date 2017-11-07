@@ -4,12 +4,14 @@
 	<meta charset="UTF-8">
 	<title>天天果园首页</title>
 	<link rel="stylesheet" type="text/css" href="../css/iconfont.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/public.css"/>
 	<link rel="stylesheet" type="text/css" href="../css/index.css"/>
 	<script src="../js/jquery-1.11.1.min.js"></script>
 	<script src="../js/myCookie.js"></script>
 	<script src="../js/index.js"></script>
 </head>
 <body>
+	<!--全屏遮罩层-->
 	<div id="mask">
 		<div id="smask">
 			<div id="shopshow">
@@ -49,6 +51,7 @@
 			</div>
 		</div>
 	</div>
+	<!--头部，最上边的一小条-->
 	<div id="header">
 		<div class="header">
 			<ul class="header_left">
@@ -203,7 +206,7 @@
 				<li><a href="#">星夜达</a></li>
 			</ul>
 			<ul class="header_right">
-				<li>
+				<li id="lo_reg">
 					<a href="login.html">[&nbsp;登录&nbsp;]</a>
 					 &nbsp;&nbsp;,&nbsp;&nbsp;
 					 <a href="register.html">[&nbsp;注册有惊喜&nbsp;]</a>
@@ -280,41 +283,57 @@
 			</ul>
 		</div>
 	</div>
+	<!--logo，导航栏-->
 	<div id="nav">
 		<div class="nav">
 			<a href="#">
 				<img src="../img/logo.jpg" width="300"/>
 			</a>
 			<ul id="intro">
-				<li>
+				<li class="active_intro">
 					<a href="#">
 						<p>首页</p>
 						Home
 					</a>
+					<span class="line_2">
+						
+					</span>
 				</li>
 				<li>
 					<a href="#">
 						<p>鲜果</p>
 						Fruit
 					</a>
+					<span class="line_2">
+						
+					</span>
 				</li>
 				<li>
 					<a href="#">
 						<p>生鲜</p>
 						Fresh
 					</a>
+					<span class="line_2">
+						
+					</span>
 				</li>
 				<li>
 					<a href="#">
 						<p>礼品</p>
 						Gift
 					</a>
+					<span class="line_2">
+						
+					</span>
 				</li>
 				<li>
 					<a href="#" class="intro_las_a">
 						<p>会员中心</p>
 						VIP Club
 					</a>
+					<span class="line_2">
+						
+					</span>
 				</li>
 			</ul>
 			<div id="search">
@@ -391,6 +410,7 @@
 			</div>
 		</div>
 	</div>
+	<!--轮播图-->
 	<div id="banner">
 		<div id="sbanner">
 			<ul>
@@ -406,6 +426,7 @@
 			</ol>
 		</div>
 	</div>
+	<!--广告层-->
 	<div id="ad">
 		<div id="sad">
 			<ul>
@@ -416,6 +437,7 @@
 			</ul>
 		</div>
 	</div>
+	<!--主要板块，json,ajax获取-->
 	<div class="stairs">
 		<div class="s_stairs">
 			<div class="s_stairsHead">
@@ -496,8 +518,8 @@
 			<span class="louti_s1">4F</span>
 		</li>
 	</ul>
+	<!--底部-->
 	<div id="footer">
-		
 		<div id="sfooter">
 			<ul id="trans">
 				<li class="trans_1"></li>
@@ -586,5 +608,11 @@
 			</div>
 		</div>
 	</div>
+	<div class="top_ce">
+		<a href="#" class="top1"></a>
+		<a href="#" class="top2"></a>
+		<a href="javascript:;" id="top3"></a>
+	</div>
 </body>
 </html>
+

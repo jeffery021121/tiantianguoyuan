@@ -3,7 +3,541 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>登录页面</title>
+		<link rel="stylesheet" type="text/css" href="../css/iconfont.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/public.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/login.css"/>
+		<script src="../js/jquery-1.11.1.min.js"></script>
+		<script src="../js/myCookie.js"></script>
+		<script src="../js/login.js"></script>
 	</head>
 	<body>
+		<div id="header">
+		<div class="header">
+			<ul class="header_left">
+				<li class="location">
+					<span class="icon-car">	
+					</span>
+					<span id="city">
+						上海
+					</span>
+					<span class="icon-icon-up">
+					</span>
+					<div id="_location">
+						<h5>热门城市：</h5>
+						<ul class="hot_city">
+							<li><a href="javascript:;">上海</a></li>
+							<li><a href="javascript:;">广州</a></li>
+							<li><a href="javascript:;">北京</a></li>
+							<li><a href="javascript:;">苏州</a></li>
+							<li><a href="javascript:;">南京</a></li>
+							<li><a href="javascript:;">深圳</a></li>
+						</ul>
+						<span id="sel_city">
+							选择城市:
+						</span>
+						<ul class="all_city">
+							<li>上海</li>
+							<li>上海崇明</li>
+							<li>
+								<div class="shen">
+									江苏
+								<span class="icon-dayuhao">
+									
+								</span>
+								</div>
+								<ul>
+									<li>常州</li>
+									<li>南京</li>
+									<li>苏州</li>
+									<li>无锡</li>
+									<li>泰州</li>
+									<li>南通</li>
+									<li>连云港</li>
+									<li>盐城</li>
+									<li>扬州</li>
+									<li>宿迁</li>
+									<li>淮安</li>
+									<li>徐州</li>
+									<li>镇江</li>
+								</ul>
+							</li>
+							<li>
+								<div class="shen">
+									浙江
+								<span class="icon-dayuhao">
+									
+								</span>
+								</div>
+								<ul>
+									<li>杭州</li>
+									<li>宁波</li>
+									<li>金华</li>
+									<li>台州</li>
+									<li>湖州</li>
+									<li>嘉兴</li>
+									<li>丽水</li>
+									<li>绍兴</li>
+									<li>温州</li>
+									<li>舟山</li>
+									<li>衢州</li>
+								</ul>
+							</li>
+							<li>
+								<div class="shen">
+									安徽
+									<span class="icon-dayuhao"></span>
+								</div>
+								<ul>
+									<li>合肥</li>
+									<li>徐州</li>
+									<li>蚌埠</li>
+									<li>亳州</li>
+									<li>滁州</li>
+									<li>阜阳</li>
+									<li>淮北</li>
+									<li>淮南</li>
+									<li>六安</li>
+									<li>黄山</li>
+									<li>马鞍山</li>
+									<li>铜陵</li>
+									<li>芜湖</li>
+									<li>宿州</li>
+									<li>宣城</li>
+									<li>池州</li>
+								</ul>
+							</li>
+							<li>北京</li>
+							<li>天津</li>
+							<li>
+								<div class="shen">
+									河北
+								<span class="icon-dayuhao">
+									
+								</span>
+								</div>
+								<ul>
+									<li>邢台</li>
+									<li>石家庄</li>
+									<li>唐山</li>
+									<li>秦皇岛</li>
+									<li>廊坊</li>
+									<li>保定</li>
+									<li>衡水</li>
+									<li>张家口</li>
+									<li>沧州</li>
+									<li>承德</li>
+									<li>邯郸</li>
+								</ul>
+							</li>
+							<li>
+								<div class="shen">
+									广东
+									<span class="icon-dayuhao"></span>
+								</div>
+								<ul>
+									<li>深圳</li>
+									<li>广州</li>
+									<li>佛山</li>
+									<li>珠海</li>
+									<li>湛江</li>
+									<li>韶关</li>
+									<li>江门</li>
+									<li>茂名</li>
+									<li>汕尾</li>
+									<li>梅州</li>
+									<li>揭阳</li>
+									<li>云浮</li>
+									<li>中山</li>
+									<li>东莞</li>
+									<li>阳江</li>
+									<li>清远</li>
+									<li>惠州</li>
+									<li>肇庆</li>
+									<li>河源</li>
+									<li>潮州</li>
+									<li>汕头</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li>满百包邮（环郊内）</li>
+				<li><a href="#">星夜达</a></li>
+			</ul>
+			<ul class="header_right">
+				<li>
+					<a href="login.html">[&nbsp;登录&nbsp;]</a>
+					 &nbsp;&nbsp;,&nbsp;&nbsp;
+					 <a href="register.html">[&nbsp;注册有惊喜&nbsp;]</a>
+				</li>
+				<li>|</li>
+				<li id="notic">果园公告
+					<ul id="notice_list">
+						<li>
+							<span>
+								全仓充值活动公告一
+							</span>
+						</li>
+						
+						<li>
+							<span>
+								全仓充值活动公告二
+							</span>
+						</li>
+
+						<li>
+							<span>
+								全仓充值活动公告三
+							</span>
+						</li>
+						<li class="last_notice">
+							<a href="">查看更多&nbsp;></a>
+							<p id="new">new</p>
+						</li>
+						
+					</ul>
+					
+				
+				</li>
+				<li>|</li>
+				<li><a href="#">劵卡兑换</a></li>
+				<li>|</li>
+				<li id="phonehome">
+					<span class="icon-phone">
+						
+					</span>
+					<span>
+						手机乐园
+					</span>
+					<div id="_phonehome">
+						<p>
+							<span id="app">
+								下载果园app&nbsp;,
+							</span>
+							即享果园特价商品
+						</p>
+						<div id="dlapp">
+							<img src="../img/guan_ewcode2.jpg" alt="" width="100"/>
+							<img id="iphone" src="../img/guan_btn01.jpg"/>
+							<img id="android" src="../img/guan_btn02.jpg"/>
+						</div>
+						<div id="wechat">
+							<img src="../img/guan_ewcode1.jpg" alt="" width="100"/>
+							<p>
+								<span id="">
+									关注果园微信
+								</span>
+								优惠信息实时掌握
+							</p>
+						</div>
+					</div>
+				</li>
+				<li>|</li>
+				<li>
+					<span class="icon-yunxiaomaservice"></span>
+					<b>
+						400-720-077
+					</b
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div id="nav">
+		<div class="nav">
+			<a href="#">
+				<img src="../img/logo.jpg" width="300"/>
+			</a>
+			<ul id="intro">
+				<li>
+					<a href="#">
+						<p>首页</p>
+						Home
+					</a>
+					<span class="line_2">
+						
+					</span>
+				</li>
+				<li>
+					<a href="#">
+						<p>鲜果</p>
+						Fruit
+					</a>
+					<span class="line_2">
+						
+					</span>
+				</li>
+				<li>
+					<a href="#">
+						<p>生鲜</p>
+						Fresh
+					</a>
+					<span class="line_2">
+						
+					</span>
+				</li>
+				<li>
+					<a href="#">
+						<p>礼品</p>
+						Gift
+					</a>
+					<span class="line_2">
+						
+					</span>
+				</li>
+				<li>
+					<a href="#" class="intro_las_a">
+						<p>会员中心</p>
+						VIP Club
+					</a>
+					<span class="line_2">
+						
+					</span>
+				</li>
+			</ul>
+			<div id="search">
+				<div id="seach_left">
+					<div id="sea">
+						<input type="text" id="txt" placeholder="请输入关键字"/>
+						<div>
+							<input type="button" id="sea_btn"/>
+						</div>
+					</div>
+						
+					
+					<p class="hot_sea">
+						<span id="">
+							热门：
+						</span>
+						<a href="#">橙</a>
+						<a href="#">提子</a>
+						<a href="#">樱桃</a>
+						<a href="#">苹果</a>
+					</p>
+				</div>
+				<div id="seach_right" class="seach_right">
+					<span id="shop_num">
+						0
+					</span>
+					<b class="icon-gouwuche">
+						
+					</b>
+					<div id="shopcar_con">
+						<span id="null_show">
+							购物车中还没有商品,赶紧选购吧！
+						</span>
+						<ul id="shopcar">
+							<!--<li class="pro_list">
+								<a href="#">
+									<img src="../img/1-270x270-2209-1XHASYXF.jpg" width="70" height="70"/>
+									<div class="shopcar_intro">
+										<h5>月满乾坤乱七八糟fafasdfasdfadfasdfasddfasdfasdf</h5>
+										<h5>￥500.00/盒ddassdfasdffassdfsdfasdfasddfasdf</h5>
+									</div>
+								</a>
+								<div class="pro_num">
+									<span class="add_num">-</span>
+									<span class="show_num">1</span>
+									<span class="sub_num">+</span>
+								</div>
+								<span class="del">
+									删除
+								</span>
+							</li>-->
+						</ul>
+						<div id="shop_show">
+							<!--<div id="line">
+								<div id="sum_num">
+									共
+									<span id="sum_numshow">6</span>
+									件商品
+								</div>
+								<div id="sum_price">
+									商品小计
+									<span id="pay_money">123.00</span>
+								</div>
+							</div>
+							<input type="button" id="pay_now" value="立即结算" />-->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div id="main">
+		<div id="smain">
+			<p class="member">
+				会员登录
+			</p>
+			<div id="login">
+				<div id="loleft">
+					<img src="../img/huiyuan.jpg">
+					<input type="button" id="regbtn" value="会员注册>" />
+				</div>
+				<div id="logright">
+					<ul>
+						<li>
+							<div class="labe">
+								手机号
+							</div>
+							<div class="_input">
+								<input type="text" class="input_box" id="phonenum" value="" />
+								<span class="error">
+									
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="labe">
+								密码
+							</div>
+							<div class="_input">
+								<input type="password" class="input_box" id="pwd" placeholder="请输入6-20位字符" />
+								<span class="error">
+										
+								</span>
+							</div>
+						</li>
+						<li class="check_box">
+							<div id="scheck_box">
+								<div id="scheck_box_l">
+									<input type="checkbox" id="remenber" value="" />
+									<label for="remenber">记住密码</label>
+								</div>
+								<div id="scheck_box_r">
+									<a href="#">忘记密码</a>
+									<a href="#">快捷登录</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div id="btn_box">
+							<input type="button" value="登录" id="btn_1"/>
+							<input type="button" value="注册会员" id="btn_2"/>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<!--footer和右侧边栏-->
+	<div id="footer">
+		
+		<div id="sfooter">
+			<ul id="trans">
+				<li class="trans_1"></li>
+				<li class="trans_2"></li>
+				<li class="trans_3"></li>
+				<li class="trans_4"></li>
+			</ul>
+			<div id="sfooter_body">
+				<div class="fbody_1">
+					<div id="logo_box">
+						<img src="../img/logo.jpg" height="82"/>
+					</div>
+					<img src="../img/guan_tel.png"/>
+					<p>
+						<span id="">
+							电话客服
+						</span>
+						09:00&ensp;-&ensp;21:00
+					</p>
+					<p>
+						<span id="">
+							在线客服
+						</span>
+						08:00&ensp;-&ensp;24:00
+					</p>
+				</div>
+				<div class="fbody_2">
+					<div class="f_code1">
+						<img src="../img/guan_ewcode1.jpg" width="130"/>
+						<span>
+							天天果园官方微信
+						</span>
+					</div>
+					<div class="f_code2">
+						<img src="../img/guan_ewcode2.jpg" width="130"/>
+						<span>
+							天天果园APP
+						</span>
+					</div>
+				</div>
+				<ul class="fbody_3">
+					<li>
+						<h4>购物指南</h4>
+						<a href="#">新用户注册</a>
+						<a href="#">在线下单</a>
+						<a href="#">支付方式</a>
+					</li>
+					<li>
+						<h4>配送说明</h4>
+						<a href="#">运费说明</a>
+						<a href="#">运费方式</a>
+						<a href="#">发票说明</a>
+					</li>
+					<li>
+						<h4>售后服务</h4>
+						<a href="#">退换货规则</a>
+						<a href="#">服务保障承诺</a>
+						<a href="#">验货与签收</a>
+					</li>
+					<li>
+						<h4>企业服务</h4>
+						<a href="#">企业订购</a>
+						<a href="#">公司简介</a>
+						<a href="#">定制专区</a>
+					</li>
+				</ul>
+			</div>
+			<div id="sfooter_footer">
+				<p class="sf_fp1">
+					版权所有 ©2017上海天天鲜果电子商务有限公司&nbsp;&nbsp;保留所有权利 | 
+					<a href="#">沪ICP备12042163</a>
+				</p>
+				<p class="sf_fp2">
+					天天果园
+					&nbsp;&nbsp;
+					鲜果网购
+				</p>
+				<div class="sf_fp3">
+					<a href="#">
+						<img src="../img/guan_shgs.gif" width="42"/>
+					</a>
+					<a href="#">
+						<img src="../img/guan_wgdjp.png" width="34"/>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="top_ce">
+		<a href="#" class="top1"></a>
+		<a href="#" class="top2"></a>
+		<a href="javascript:;" id="top3"></a>
+	</div>
 	</body>
 </html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				height:500px;
+				width:1000px;
+				background: pink;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="_data">
+			
+		</div>
+	</body>
+</html>
+<script src="../js/jquery-1.11.1.min.js" >
+	
+</script>
+<script type="text/javascript">
+var _json={}
+function rand(min,max){
+	return Math.floor(Math.random()*(max-min+1)+min)
+}
+
+var discount,src;
+var arr=[]
+for(var i=5;i<105;++i){
+	var num=rand(1,100)
+	if(num>30){
+		discount="0"
+	}else if(num<20){
+		discount="新品"
+	}else{
+		discount="第二份半价"
+	}
+	
+	if(i>9&&i<100){
+		src="a0"+i+".jpg"
+	}else if(i>=100){
+		src="a"+i+".jpg"
+	}else{
+		src="a00"+i+".jpg"
+	}
+	_json={
+		"src":src,
+		"intro":"内蒙古羔羊肉卷"+(i-4),
+		"price":"￥"+rand(30,200)+".00",
+		"kilo":rand(200,500)+"g",
+		"discount":discount
+	}
+	arr.push(_json)
+	//console.log(arr)
+	
+}
+var brr=(JSON.stringify(arr))
+console.log(brr)
+	//完美
+		/*var data=document.getElementById("_data")
+		data.innerHTML=brr
+		alert(brr)*/
+		/*var deffered=$.ajax({
+			type:"get",
+			url:"../json/list.json",
+			async:true
+		});
+		//alert()
+		deffered.done(function(res){
+			$("#_data").text(res[1]["src"])
+		})*/
+		
+</script>

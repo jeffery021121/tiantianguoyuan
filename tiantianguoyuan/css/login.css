@@ -1,0 +1,148 @@
+body {
+  background: white; }
+
+.chage_border {
+  transition: all 0.3s;
+  border: 1px solid #65a130;
+  box-shadow: 1px 1px 5px rgba(101, 161, 48, 0.75), -1px -1px 5px rgba(101, 161, 48, 0.75); }
+
+.clear, #main #smain #login:after, #main #smain #login #logright ul li:after {
+  content: ".";
+  display: block;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  clear: both; }
+
+#nav {
+  box-shadow: 0 2px 8px rgba(230, 230, 230, 0.75);
+  border-bottom: 1px solid #f1f1f1; }
+
+#main {
+  width: 100%; }
+  #main #smain {
+    width: 1000px;
+    margin: 0 auto;
+    padding-top: 50px;
+    padding-bottom: 20px; }
+    #main #smain .member {
+      font-size: 20px;
+      font-family: 'Hiragino Sans GB','Microsoft YaHei',sans-serif;
+      color: #999999;
+      padding-top: 15px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid #ccc;
+      margin-bottom: 36px; }
+    #main #smain #login #loleft {
+      float: left;
+      width: 500px;
+      position: relative;
+      margin-bottom: 46px;
+      overflow: hidden; }
+      #main #smain #login #loleft img {
+        display: inline-block;
+        width: 500px; }
+      #main #smain #login #loleft #regbtn {
+        display: block;
+        position: absolute;
+        bottom: 21px;
+        left: 175px;
+        padding: 12px 33px;
+        height: 48px;
+        border-radius: 4px;
+        color: #64a131;
+        border-color: #64a131;
+        text-align: center;
+        background: white;
+        outline: none;
+        cursor: pointer;
+        font-size: 18px; }
+    #main #smain #login #logright {
+      float: right;
+      width: 440px;
+      padding-left: 60px;
+      margin-top: 75px; }
+      #main #smain #login #logright ul {
+        margin-bottom: 10px; }
+        #main #smain #login #logright ul li {
+          margin-bottom: 26px; }
+          #main #smain #login #logright ul li.check_box {
+            margin-bottom: 6px; }
+            #main #smain #login #logright ul li.check_box #scheck_box {
+              font-size: 16px;
+              float: right;
+              color: #999999;
+              width: 300px; }
+              #main #smain #login #logright ul li.check_box #scheck_box #scheck_box_l {
+                height: 43px;
+                line-height: 43px;
+                float: left; }
+              #main #smain #login #logright ul li.check_box #scheck_box #scheck_box_r {
+                float: right;
+                line-height: 43px; }
+                #main #smain #login #logright ul li.check_box #scheck_box #scheck_box_r a {
+                  color: #999999;
+                  text-decoration: underline; }
+          #main #smain #login #logright ul li .labe {
+            width: 96px;
+            height: 40px;
+            line-height: 40px;
+            font-size: 16px;
+            float: left;
+            color: #999999;
+            text-align: right; }
+          #main #smain #login #logright ul li ._input {
+            float: left;
+            padding-left: 42px;
+            position: relative; }
+            #main #smain #login #logright ul li ._input .input_box {
+              display: block;
+              width: 274px;
+              height: 26px;
+              line-height: 26px;
+              outline: none;
+              padding: 6px 12px;
+              font-size: 14px;
+              color: #555;
+              border: 1px solid #cccccc; }
+            #main #smain #login #logright ul li ._input .error {
+              display: none;
+              position: absolute;
+              right: -36px;
+              top: 10px;
+              width: 22px;
+              height: 22px;
+              background: url(../img/icon-error.png) no-repeat center; }
+          #main #smain #login #logright ul li > #btn_box {
+            float: right; }
+            #main #smain #login #logright ul li > #btn_box #btn_1 {
+              cursor: pointer;
+              outline: none;
+              font-size: 18px;
+              width: 143px;
+              height: 38px;
+              background-color: #64a131;
+              padding: 0px;
+              border-radius: 4px;
+              border: none;
+              line-height: 38px;
+              text-align: center;
+              color: #ffffff; }
+            #main #smain #login #logright ul li > #btn_box #btn_2 {
+              cursor: pointer;
+              outline: none;
+              font-size: 18px;
+              width: 143px;
+              height: 38px;
+              color: #64a131;
+              padding: 0px;
+              border-radius: 4px;
+              border: none;
+              line-height: 38px;
+              text-align: center;
+              background-color: #f5ffed;
+              margin-left: 9px;
+              margin-right: 3px;
+              border: 1px solid #64a131; }
+
+/*# sourceMappingURL=login.css.map */

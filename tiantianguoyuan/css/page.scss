@@ -1,0 +1,135 @@
+.clear{
+    content:".";
+    display: block;
+    height:0;
+    overflow: hidden;
+    visibility: hidden;
+    clear: both;
+}
+$color_green:#64A131;
+$h_header:30px;
+#nav{
+    box-shadow: 0 2px 8px rgba(230,230,230,0.75);
+    border-bottom: 1px solid #f1f1f1;
+    margin-bottom: 2px;
+}
+//全图遮罩层
+#mask{
+    height: 100%;
+    width: 100%;
+    background:rgba(0,0,0,0.5) ;
+    display: none;
+    position: fixed;
+    left: 0;
+    top:0;
+    z-index: 350;
+    #smask{
+        position: fixed;
+        left:0;
+        right: 0;
+        top:0;
+        bottom: 0;
+        margin: auto;
+        width: 520px;
+        height: 285px;
+        background: rgba(0,0,0,0.2);
+        #shopshow{
+            position: fixed;
+            left:0;
+            right: 0;
+            top:0;
+            bottom: 0;
+            margin: auto;
+            width: 510px;
+            height: 275px;
+            background: skyblue;
+            overflow: hidden;
+            #shops_head{
+                height: 40px;
+                padding-right: 17px;
+                background-color: #eaeaea;
+                #close{
+                    height:24px ;
+                    width:25px ;
+                    float: right;
+                    background:url(../img/cha.png) no-repeat center;
+                    margin-top: 10px;
+                    cursor: pointer;
+                }
+            }
+            #shops_body{
+                background: #FFFFFF;
+                padding: 28px 90px 25px;;
+                #addsuc{
+                    margin-bottom:22px;
+                    &:after{
+                        @extend .clear
+                    }
+                    #add_img{
+                        background: url(../img/icons.png) no-repeat -8px -247px;
+                        height: 68px;
+                        width: 60px;
+                        float: left;
+                    }
+                    &>p{
+                        font-size: 30px;
+                        margin: 13px 0;
+                        color: #555;
+                        padding-left: 20px;
+                        float: right;
+                    }
+                }
+                #shop_sum{
+                    font-size: 18px;
+                    color: #999;
+                    white-space: nowrap;
+                    padding-left: 4px;
+                    text-align: center;
+                    
+                    
+                    
+                    .shop_car_color{
+                            color: #f6ab00;
+                        }
+                }
+                #addsuc_footer{
+                    &:after{
+                        @extend .clear
+                    }
+                    padding-top:28px;
+                    #continue{
+                        color: #64a131;
+                        background: #f5ffed;
+                        border: 1px solid #64a131;
+                        cursor: pointer;
+                        float: left;
+                        margin-left: 5px;
+                        width: 147px;
+                        height: 40px;
+                        font-size: 16px;
+                        text-align: center;
+                        line-height: 40px;
+                        border-radius: 4px;
+                    }
+                    #check_out{
+                        color: rgb(239, 244, 236);
+                        background: rgb(100, 161, 49);
+                        border: 1px solid #64a131;
+                        border-color: rgb(100, 161, 49);
+                        cursor: pointer;
+                        float: right;
+                        margin-right: 5px;
+                        width: 147px;
+                        height: 40px;
+                        font-size: 16px;
+                        text-align: center;
+                        line-height: 40px;
+                        border-radius: 4px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//正文从这里开始
